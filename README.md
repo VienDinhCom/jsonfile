@@ -7,10 +7,10 @@ Easily read/write JSON files in Deno
 Reads a JSON file and then parses it into an object
 
 ```ts
-import { readJson, readJsonSync } from 'https://deno.land/x/jsonfile/mod.ts';
+import { readJson, readJsonSync } from "https://deno.land/x/jsonfile/mod.ts";
 
-const f = await readJson('./foo.json');
-const foo = readJsonSync('./foo.json');
+const f = await readJson("./foo.json");
+const foo = readJsonSync("./foo.json");
 ```
 
 ## writeJson
@@ -28,11 +28,11 @@ You can also specify options from `Deno.WriteFileOptions` to configure how the
 file is written.
 
 ```ts
-import { writeJson, writeJsonSync } from 'https://deno.land/x/jsonfile/mod.ts';
+import { writeJson, writeJsonSync } from "https://deno.land/x/jsonfile/mod.ts";
 
-writeJson('./target.json', { foo: 'bar' }, { spaces: 2 }); // returns a promise
-writeJsonSync('./target.json', { foo: 'bar' }, { replacer: ['foo'] }); // void
+writeJson("./target.json", { foo: "bar" }, { spaces: 2 }); // returns a promise
+writeJsonSync("./target.json", { foo: "bar" }, { replacer: ["foo"] }); // void
 
 // appends to the file instead of rewriting
-writeJsonSync('./target.json', { foo: 'bar' }, { append: true });
+writeJsonSync("./target.json", { foo: "bar" }, { append: true });
 ```
